@@ -1,0 +1,2311 @@
+
+<!-- Styles -->
+<style>
+#chartdiv1 {
+	width	: 50%;
+	height	: 300px;
+}		
+
+#chartdiv2 {
+    width   : 50%;
+    height  : 300px;
+}       										
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+<!-- Chart code -->
+<script>
+var chartData = [
+  {
+    "average bps": 1163863, 
+    "average pps": 215, 
+    "date": "2016-12-16 00:10:00", 
+    "totalbytes": 50800769, 
+    "totalflow": 4811, 
+    "totalpackets": 75247
+  }, 
+  {
+    "average bps": 408047, 
+    "average pps": 131, 
+    "date": "2016-12-16 00:15:00", 
+    "totalbytes": 18018542, 
+    "totalflow": 5345, 
+    "totalpackets": 46491
+  }, 
+  {
+    "average bps": 478790, 
+    "average pps": 110, 
+    "date": "2016-12-16 00:20:00", 
+    "totalbytes": 20918279, 
+    "totalflow": 4735, 
+    "totalpackets": 38676
+  }, 
+  {
+    "average bps": 156619, 
+    "average pps": 91, 
+    "date": "2016-12-16 00:25:00", 
+    "totalbytes": 6931183, 
+    "totalflow": 4741, 
+    "totalpackets": 32314
+  }, 
+  {
+    "average bps": 524677, 
+    "average pps": 140, 
+    "date": "2016-12-16 00:30:00", 
+    "totalbytes": 23248022, 
+    "totalflow": 4629, 
+    "totalpackets": 49910
+  }, 
+  {
+    "average bps": 291576, 
+    "average pps": 112, 
+    "date": "2016-12-16 00:35:00", 
+    "totalbytes": 12730391, 
+    "totalflow": 5677, 
+    "totalpackets": 39232
+  }, 
+  {
+    "average bps": 210037, 
+    "average pps": 97, 
+    "date": "2016-12-16 00:40:00", 
+    "totalbytes": 9267473, 
+    "totalflow": 4690, 
+    "totalpackets": 34580
+  }, 
+  {
+    "average bps": 434413, 
+    "average pps": 126, 
+    "date": "2016-12-16 00:45:00", 
+    "totalbytes": 18747664, 
+    "totalflow": 5622, 
+    "totalpackets": 43717
+  }, 
+  {
+    "average bps": 492567, 
+    "average pps": 259, 
+    "date": "2016-12-16 00:50:00", 
+    "totalbytes": 22059718, 
+    "totalflow": 4934, 
+    "totalpackets": 92801
+  }, 
+  {
+    "average bps": 303899, 
+    "average pps": 108, 
+    "date": "2016-12-16 00:55:00", 
+    "totalbytes": 13521034, 
+    "totalflow": 5135, 
+    "totalpackets": 38759
+  }, 
+  {
+    "average bps": 1395893, 
+    "average pps": 217, 
+    "date": "2016-12-16 01:00:00", 
+    "totalbytes": 61364896, 
+    "totalflow": 4477, 
+    "totalpackets": 76481
+  }, 
+  {
+    "average bps": 557450, 
+    "average pps": 119, 
+    "date": "2016-12-16 01:05:00", 
+    "totalbytes": 24520010, 
+    "totalflow": 4668, 
+    "totalpackets": 42168
+  }, 
+  {
+    "average bps": 1141274, 
+    "average pps": 210, 
+    "date": "2016-12-16 01:10:00", 
+    "totalbytes": 50809667, 
+    "totalflow": 4825, 
+    "totalpackets": 74869
+  }, 
+  {
+    "average bps": 524594, 
+    "average pps": 145, 
+    "date": "2016-12-16 01:15:00", 
+    "totalbytes": 22258135, 
+    "totalflow": 5531, 
+    "totalpackets": 49435
+  }, 
+  {
+    "average bps": 468113, 
+    "average pps": 120, 
+    "date": "2016-12-16 01:20:00", 
+    "totalbytes": 20768213, 
+    "totalflow": 4990, 
+    "totalpackets": 42728
+  }, 
+  {
+    "average bps": 163799, 
+    "average pps": 85, 
+    "date": "2016-12-16 01:25:00", 
+    "totalbytes": 7310898, 
+    "totalflow": 5036, 
+    "totalpackets": 30625
+  }, 
+  {
+    "average bps": 402973, 
+    "average pps": 124, 
+    "date": "2016-12-16 01:30:00", 
+    "totalbytes": 17972304, 
+    "totalflow": 4825, 
+    "totalpackets": 44488
+  }, 
+  {
+    "average bps": 290131, 
+    "average pps": 117, 
+    "date": "2016-12-16 01:35:00", 
+    "totalbytes": 12776188, 
+    "totalflow": 5626, 
+    "totalpackets": 41261
+  }, 
+  {
+    "average bps": 196989, 
+    "average pps": 101, 
+    "date": "2016-12-16 01:40:00", 
+    "totalbytes": 8724252, 
+    "totalflow": 4222, 
+    "totalpackets": 35871
+  }, 
+  {
+    "average bps": 438791, 
+    "average pps": 195, 
+    "date": "2016-12-16 01:45:00", 
+    "totalbytes": 19469114, 
+    "totalflow": 5124, 
+    "totalpackets": 69526
+  }, 
+  {
+    "average bps": 468563, 
+    "average pps": 250, 
+    "date": "2016-12-16 01:50:00", 
+    "totalbytes": 21013664, 
+    "totalflow": 4634, 
+    "totalpackets": 89888
+  }, 
+  {
+    "average bps": 309352, 
+    "average pps": 111, 
+    "date": "2016-12-16 01:55:00", 
+    "totalbytes": 13755183, 
+    "totalflow": 5579, 
+    "totalpackets": 39655
+  }, 
+  {
+    "average bps": 1529881, 
+    "average pps": 238, 
+    "date": "2016-12-16 02:00:00", 
+    "totalbytes": 66952778, 
+    "totalflow": 4506, 
+    "totalpackets": 83595
+  }, 
+  {
+    "average bps": 571642, 
+    "average pps": 116, 
+    "date": "2016-12-16 02:05:00", 
+    "totalbytes": 25533046, 
+    "totalflow": 4907, 
+    "totalpackets": 41465
+  }, 
+  {
+    "average bps": 1184109, 
+    "average pps": 220, 
+    "date": "2016-12-16 02:10:00", 
+    "totalbytes": 51682670, 
+    "totalflow": 4881, 
+    "totalpackets": 76844
+  }, 
+  {
+    "average bps": 434441, 
+    "average pps": 138, 
+    "date": "2016-12-16 02:15:00", 
+    "totalbytes": 18742571, 
+    "totalflow": 5223, 
+    "totalpackets": 47701
+  }, 
+  {
+    "average bps": 492605, 
+    "average pps": 131, 
+    "date": "2016-12-16 02:20:00", 
+    "totalbytes": 21730623, 
+    "totalflow": 4697, 
+    "totalpackets": 46542
+  }, 
+  {
+    "average bps": 160346, 
+    "average pps": 86, 
+    "date": "2016-12-16 02:25:00", 
+    "totalbytes": 6953929, 
+    "totalflow": 4728, 
+    "totalpackets": 30158
+  }, 
+  {
+    "average bps": 413658, 
+    "average pps": 127, 
+    "date": "2016-12-16 02:30:00", 
+    "totalbytes": 18070220, 
+    "totalflow": 4571, 
+    "totalpackets": 44601
+  }, 
+  {
+    "average bps": 271565, 
+    "average pps": 106, 
+    "date": "2016-12-16 02:35:00", 
+    "totalbytes": 12178953, 
+    "totalflow": 5299, 
+    "totalpackets": 38175
+  }, 
+  {
+    "average bps": 243224, 
+    "average pps": 127, 
+    "date": "2016-12-16 02:40:00", 
+    "totalbytes": 10714664, 
+    "totalflow": 4582, 
+    "totalpackets": 44883
+  }, 
+  {
+    "average bps": 523482, 
+    "average pps": 127, 
+    "date": "2016-12-16 02:45:00", 
+    "totalbytes": 23222409, 
+    "totalflow": 5222, 
+    "totalpackets": 45296
+  }, 
+  {
+    "average bps": 511049, 
+    "average pps": 258, 
+    "date": "2016-12-16 02:50:00", 
+    "totalbytes": 22906306, 
+    "totalflow": 4199, 
+    "totalpackets": 92732
+  }, 
+  {
+    "average bps": 299925, 
+    "average pps": 118, 
+    "date": "2016-12-16 02:55:00", 
+    "totalbytes": 13227522, 
+    "totalflow": 5007, 
+    "totalpackets": 41649
+  }, 
+  {
+    "average bps": 1406629, 
+    "average pps": 236, 
+    "date": "2016-12-16 03:00:00", 
+    "totalbytes": 62261652, 
+    "totalflow": 4672, 
+    "totalpackets": 83604
+  }, 
+  {
+    "average bps": 533514, 
+    "average pps": 111, 
+    "date": "2016-12-16 03:05:00", 
+    "totalbytes": 23569086, 
+    "totalflow": 4762, 
+    "totalpackets": 39458
+  }, 
+  {
+    "average bps": 1106387, 
+    "average pps": 197, 
+    "date": "2016-12-16 03:10:00", 
+    "totalbytes": 49443756, 
+    "totalflow": 4675, 
+    "totalpackets": 70625
+  }, 
+  {
+    "average bps": 418633, 
+    "average pps": 135, 
+    "date": "2016-12-16 03:15:00", 
+    "totalbytes": 18367822, 
+    "totalflow": 5390, 
+    "totalpackets": 47523
+  }, 
+  {
+    "average bps": 492929, 
+    "average pps": 131, 
+    "date": "2016-12-16 03:20:00", 
+    "totalbytes": 21953276, 
+    "totalflow": 5044, 
+    "totalpackets": 46943
+  }, 
+  {
+    "average bps": 142781, 
+    "average pps": 77, 
+    "date": "2016-12-16 03:25:00", 
+    "totalbytes": 6392509, 
+    "totalflow": 4374, 
+    "totalpackets": 27927
+  }, 
+  {
+    "average bps": 508235, 
+    "average pps": 122, 
+    "date": "2016-12-16 03:30:00", 
+    "totalbytes": 22053153, 
+    "totalflow": 4066, 
+    "totalpackets": 42360
+  }, 
+  {
+    "average bps": 265226, 
+    "average pps": 107, 
+    "date": "2016-12-16 03:35:00", 
+    "totalbytes": 11644547, 
+    "totalflow": 5197, 
+    "totalpackets": 37923
+  }, 
+  {
+    "average bps": 203125, 
+    "average pps": 106, 
+    "date": "2016-12-16 03:40:00", 
+    "totalbytes": 9013006, 
+    "totalflow": 4265, 
+    "totalpackets": 37840
+  }, 
+  {
+    "average bps": 417628, 
+    "average pps": 121, 
+    "date": "2016-12-16 03:45:00", 
+    "totalbytes": 18352595, 
+    "totalflow": 5248, 
+    "totalpackets": 42715
+  }, 
+  {
+    "average bps": 443899, 
+    "average pps": 241, 
+    "date": "2016-12-16 03:50:00", 
+    "totalbytes": 19609205, 
+    "totalflow": 4521, 
+    "totalpackets": 85296
+  }, 
+  {
+    "average bps": 324729, 
+    "average pps": 117, 
+    "date": "2016-12-16 03:55:00", 
+    "totalbytes": 14453392, 
+    "totalflow": 5270, 
+    "totalpackets": 41862
+  }, 
+  {
+    "average bps": 1393347, 
+    "average pps": 231, 
+    "date": "2016-12-16 04:00:00", 
+    "totalbytes": 61686264, 
+    "totalflow": 4402, 
+    "totalpackets": 81972
+  }, 
+  {
+    "average bps": 601840, 
+    "average pps": 131, 
+    "date": "2016-12-16 04:05:00", 
+    "totalbytes": 25958871, 
+    "totalflow": 4784, 
+    "totalpackets": 45255
+  }, 
+  {
+    "average bps": 1173446, 
+    "average pps": 204, 
+    "date": "2016-12-16 04:10:00", 
+    "totalbytes": 50867131, 
+    "totalflow": 5008, 
+    "totalpackets": 70796
+  }, 
+  {
+    "average bps": 1173446, 
+    "average pps": 204, 
+    "date": "2016-12-16 04:15:00", 
+    "totalbytes": 50867131, 
+    "totalflow": 5008, 
+    "totalpackets": 70796
+  }, 
+  {
+    "average bps": 495954, 
+    "average pps": 134, 
+    "date": "2016-12-16 04:20:00", 
+    "totalbytes": 22128747, 
+    "totalflow": 4660, 
+    "totalpackets": 47903
+  }, 
+  {
+    "average bps": 164807, 
+    "average pps": 97, 
+    "date": "2016-12-16 04:25:00", 
+    "totalbytes": 6873528, 
+    "totalflow": 4770, 
+    "totalpackets": 32597
+  }, 
+  {
+    "average bps": 392592, 
+    "average pps": 116, 
+    "date": "2016-12-16 04:30:00", 
+    "totalbytes": 17591743, 
+    "totalflow": 4576, 
+    "totalpackets": 41623
+  }, 
+  {
+    "average bps": 296046, 
+    "average pps": 110, 
+    "date": "2016-12-16 04:35:00", 
+    "totalbytes": 12858634, 
+    "totalflow": 5527, 
+    "totalpackets": 38529
+  }, 
+  {
+    "average bps": 212641, 
+    "average pps": 111, 
+    "date": "2016-12-16 04:40:00", 
+    "totalbytes": 9342334, 
+    "totalflow": 4663, 
+    "totalpackets": 39264
+  }, 
+  {
+    "average bps": 404668, 
+    "average pps": 116, 
+    "date": "2016-12-16 04:45:00", 
+    "totalbytes": 17922774, 
+    "totalflow": 5652, 
+    "totalpackets": 41419
+  }, 
+  {
+    "average bps": 445552, 
+    "average pps": 233, 
+    "date": "2016-12-16 04:50:00", 
+    "totalbytes": 19703954, 
+    "totalflow": 4731, 
+    "totalpackets": 82496
+  }, 
+  {
+    "average bps": 318472, 
+    "average pps": 115, 
+    "date": "2016-12-16 04:55:00", 
+    "totalbytes": 14135182, 
+    "totalflow": 5213, 
+    "totalpackets": 40943
+  }, 
+  {
+    "average bps": 1490392, 
+    "average pps": 232, 
+    "date": "2016-12-16 05:00:00", 
+    "totalbytes": 65757051, 
+    "totalflow": 4238, 
+    "totalpackets": 82038
+  }, 
+  {
+    "average bps": 580322, 
+    "average pps": 135, 
+    "date": "2016-12-16 05:05:00", 
+    "totalbytes": 25711566, 
+    "totalflow": 4636, 
+    "totalpackets": 48113
+  }, 
+  {
+    "average bps": 1105113, 
+    "average pps": 183, 
+    "date": "2016-12-16 05:10:00", 
+    "totalbytes": 49816742, 
+    "totalflow": 4993, 
+    "totalpackets": 66257
+  }, 
+  {
+    "average bps": 439463, 
+    "average pps": 148, 
+    "date": "2016-12-16 05:15:00", 
+    "totalbytes": 19082625, 
+    "totalflow": 5581, 
+    "totalpackets": 51565
+  }, 
+  {
+    "average bps": 489493, 
+    "average pps": 145, 
+    "date": "2016-12-16 05:20:00", 
+    "totalbytes": 20818273, 
+    "totalflow": 5094, 
+    "totalpackets": 49419
+  }, 
+  {
+    "average bps": 239596, 
+    "average pps": 149, 
+    "date": "2016-12-16 05:25:00", 
+    "totalbytes": 10717680, 
+    "totalflow": 6096, 
+    "totalpackets": 53539
+  }, 
+  {
+    "average bps": 415283, 
+    "average pps": 128, 
+    "date": "2016-12-16 05:30:00", 
+    "totalbytes": 18390447, 
+    "totalflow": 5700, 
+    "totalpackets": 45594
+  }, 
+  {
+    "average bps": 343755, 
+    "average pps": 133, 
+    "date": "2016-12-16 05:35:00", 
+    "totalbytes": 15282519, 
+    "totalflow": 5963, 
+    "totalpackets": 47459
+  }, 
+  {
+    "average bps": 216365, 
+    "average pps": 117, 
+    "date": "2016-12-16 05:40:00", 
+    "totalbytes": 9682151, 
+    "totalflow": 4706, 
+    "totalpackets": 42074
+  }, 
+  {
+    "average bps": 621654, 
+    "average pps": 198, 
+    "date": "2016-12-16 05:45:00", 
+    "totalbytes": 27357442, 
+    "totalflow": 6476, 
+    "totalpackets": 69766
+  }, 
+  {
+    "average bps": 486300, 
+    "average pps": 233, 
+    "date": "2016-12-16 05:50:00", 
+    "totalbytes": 21701950, 
+    "totalflow": 5199, 
+    "totalpackets": 83217
+  }, 
+  {
+    "average bps": 372787, 
+    "average pps": 128, 
+    "date": "2016-12-16 05:55:00", 
+    "totalbytes": 16329227, 
+    "totalflow": 5876, 
+    "totalpackets": 45149
+  }, 
+  {
+    "average bps": 1342434, 
+    "average pps": 225, 
+    "date": "2016-12-16 06:00:00", 
+    "totalbytes": 59916208, 
+    "totalflow": 4780, 
+    "totalpackets": 80350
+  }, 
+  {
+    "average bps": 671689, 
+    "average pps": 179, 
+    "date": "2016-12-16 06:05:00", 
+    "totalbytes": 29436283, 
+    "totalflow": 5391, 
+    "totalpackets": 62907
+  }, 
+  {
+    "average bps": 1129908, 
+    "average pps": 184, 
+    "date": "2016-12-16 06:10:00", 
+    "totalbytes": 50113256, 
+    "totalflow": 4970, 
+    "totalpackets": 65549
+  }, 
+  {
+    "average bps": 432232, 
+    "average pps": 135, 
+    "date": "2016-12-16 06:15:00", 
+    "totalbytes": 18504685, 
+    "totalflow": 5477, 
+    "totalpackets": 46525
+  }, 
+  {
+    "average bps": 546900, 
+    "average pps": 144, 
+    "date": "2016-12-16 06:20:00", 
+    "totalbytes": 24253138, 
+    "totalflow": 6119, 
+    "totalpackets": 51130
+  }, 
+  {
+    "average bps": 320108, 
+    "average pps": 211, 
+    "date": "2016-12-16 06:25:00", 
+    "totalbytes": 14115721, 
+    "totalflow": 6613, 
+    "totalpackets": 74515
+  }, 
+  {
+    "average bps": 1118183, 
+    "average pps": 270, 
+    "date": "2016-12-16 06:30:00", 
+    "totalbytes": 49292179, 
+    "totalflow": 6357, 
+    "totalpackets": 95235
+  }, 
+  {
+    "average bps": 486600, 
+    "average pps": 174, 
+    "date": "2016-12-16 06:35:00", 
+    "totalbytes": 20910202, 
+    "totalflow": 8201, 
+    "totalpackets": 60094
+  }, 
+  {
+    "average bps": 1040939, 
+    "average pps": 214, 
+    "date": "2016-12-16 06:40:00", 
+    "totalbytes": 45733029, 
+    "totalflow": 5444, 
+    "totalpackets": 75234
+  }, 
+  {
+    "average bps": 1055933, 
+    "average pps": 245, 
+    "date": "2016-12-16 06:45:00", 
+    "totalbytes": 47066923, 
+    "totalflow": 7346, 
+    "totalpackets": 87625
+  }, 
+  {
+    "average bps": 691113, 
+    "average pps": 303, 
+    "date": "2016-12-16 06:50:00", 
+    "totalbytes": 30545663, 
+    "totalflow": 6806, 
+    "totalpackets": 107217
+  }, 
+  {
+    "average bps": 1363960, 
+    "average pps": 339, 
+    "date": "2016-12-16 06:55:00", 
+    "totalbytes": 60207271, 
+    "totalflow": 7932, 
+    "totalpackets": 120031
+  }, 
+  {
+    "average bps": 2449799, 
+    "average pps": 455, 
+    "date": "2016-12-16 07:00:00", 
+    "totalbytes": 109934150, 
+    "totalflow": 7449, 
+    "totalpackets": 163411
+  }, 
+  {
+    "average bps": 1299653, 
+    "average pps": 340, 
+    "date": "2016-12-16 07:05:00", 
+    "totalbytes": 58147964, 
+    "totalflow": 8604, 
+    "totalpackets": 121897
+  }, 
+  {
+    "average bps": 1325599, 
+    "average pps": 306, 
+    "date": "2016-12-16 07:10:00", 
+    "totalbytes": 59267732, 
+    "totalflow": 9234, 
+    "totalpackets": 109626
+  }, 
+  {
+    "average bps": 3226301, 
+    "average pps": 527, 
+    "date": "2016-12-16 07:15:00", 
+    "totalbytes": 144625435, 
+    "totalflow": 10356, 
+    "totalpackets": 189299
+  }, 
+  {
+    "average bps": 6150639, 
+    "average pps": 1037, 
+    "date": "2016-12-16 07:20:00", 
+    "totalbytes": 274203982, 
+    "totalflow": 10883, 
+    "totalpackets": 370014
+  }, 
+  {
+    "average bps": 7650736, 
+    "average pps": 1260, 
+    "date": "2016-12-16 07:25:00", 
+    "totalbytes": 341959220, 
+    "totalflow": 10624, 
+    "totalpackets": 450782
+  }, 
+  {
+    "average bps": 5902518, 
+    "average pps": 1166, 
+    "date": "2016-12-16 07:30:00", 
+    "totalbytes": 264056560, 
+    "totalflow": 9805, 
+    "totalpackets": 417340
+  }, 
+  {
+    "average bps": 3437463, 
+    "average pps": 826, 
+    "date": "2016-12-16 07:35:00", 
+    "totalbytes": 154468457, 
+    "totalflow": 11470, 
+    "totalpackets": 297275
+  }, 
+  {
+    "average bps": 3414769, 
+    "average pps": 701, 
+    "date": "2016-12-16 07:40:00", 
+    "totalbytes": 152941962, 
+    "totalflow": 9809, 
+    "totalpackets": 251175
+  }, 
+  {
+    "average bps": 3669750, 
+    "average pps": 699, 
+    "date": "2016-12-16 07:45:00", 
+    "totalbytes": 164811694, 
+    "totalflow": 11027, 
+    "totalpackets": 251223
+  }, 
+  {
+    "average bps": 5123163, 
+    "average pps": 1437, 
+    "date": "2016-12-16 07:50:00", 
+    "totalbytes": 229087373, 
+    "totalflow": 14455, 
+    "totalpackets": 514288
+  }, 
+  {
+    "average bps": 4373410, 
+    "average pps": 1064, 
+    "date": "2016-12-16 07:55:00", 
+    "totalbytes": 197304221, 
+    "totalflow": 13684, 
+    "totalpackets": 384359
+  }, 
+  {
+    "average bps": 5142049, 
+    "average pps": 1223, 
+    "date": "2016-12-16 08:00:00", 
+    "totalbytes": 230734685, 
+    "totalflow": 12292, 
+    "totalpackets": 439189
+  }, 
+  {
+    "average bps": 6719810, 
+    "average pps": 1256, 
+    "date": "2016-12-16 08:05:00", 
+    "totalbytes": 302273896, 
+    "totalflow": 11570, 
+    "totalpackets": 452212
+  }, 
+  {
+    "average bps": 6208180, 
+    "average pps": 1036, 
+    "date": "2016-12-16 08:10:00", 
+    "totalbytes": 277442801, 
+    "totalflow": 10909, 
+    "totalpackets": 370430
+  }, 
+  {
+    "average bps": 4349060, 
+    "average pps": 904, 
+    "date": "2016-12-16 08:15:00", 
+    "totalbytes": 194963468, 
+    "totalflow": 12465, 
+    "totalpackets": 324372
+  }, 
+  {
+    "average bps": 6686633, 
+    "average pps": 1311, 
+    "date": "2016-12-16 08:20:00", 
+    "totalbytes": 300460540, 
+    "totalflow": 11925, 
+    "totalpackets": 471379
+  }, 
+  {
+    "average bps": 6509559, 
+    "average pps": 1162, 
+    "date": "2016-12-16 08:25:00", 
+    "totalbytes": 291684399, 
+    "totalflow": 12474, 
+    "totalpackets": 416824
+  }, 
+  {
+    "average bps": 5661123, 
+    "average pps": 1063, 
+    "date": "2016-12-16 08:30:00", 
+    "totalbytes": 254675563, 
+    "totalflow": 12465, 
+    "totalpackets": 382742
+  }, 
+  {
+    "average bps": 3191752, 
+    "average pps": 790, 
+    "date": "2016-12-16 08:35:00", 
+    "totalbytes": 141663950, 
+    "totalflow": 14157, 
+    "totalpackets": 280600
+  }, 
+  {
+    "average bps": 3446373, 
+    "average pps": 950, 
+    "date": "2016-12-16 08:40:00", 
+    "totalbytes": 154786533, 
+    "totalflow": 10729, 
+    "totalpackets": 341624
+  }, 
+  {
+    "average bps": 3713649, 
+    "average pps": 1002, 
+    "date": "2016-12-16 08:45:00", 
+    "totalbytes": 166903923, 
+    "totalflow": 12273, 
+    "totalpackets": 360339
+  }, 
+  {
+    "average bps": 6182707, 
+    "average pps": 1257, 
+    "date": "2016-12-16 08:50:00", 
+    "totalbytes": 276006112, 
+    "totalflow": 11701, 
+    "totalpackets": 449171
+  }, 
+  {
+    "average bps": 8619247, 
+    "average pps": 1637, 
+    "date": "2016-12-16 08:55:00", 
+    "totalbytes": 387798250, 
+    "totalflow": 13945, 
+    "totalpackets": 589458
+  }, 
+  {
+    "average bps": 21519666, 
+    "average pps": 2746, 
+    "date": "2016-12-16 09:00:00", 
+    "totalbytes": 962082441, 
+    "totalflow": 12859, 
+    "totalpackets": 982373
+  }, 
+  {
+    "average bps": 22399394, 
+    "average pps": 3039, 
+    "date": "2016-12-16 09:05:00", 
+    "totalbytes": 1006715603, 
+    "totalflow": 12565, 
+    "totalpackets": 1092963
+  }, 
+  {
+    "average bps": 18502990, 
+    "average pps": 2779, 
+    "date": "2016-12-16 09:10:00", 
+    "totalbytes": 831121969, 
+    "totalflow": 13256, 
+    "totalpackets": 998939
+  }, 
+  {
+    "average bps": 10121187, 
+    "average pps": 1738, 
+    "date": "2016-12-16 09:15:00", 
+    "totalbytes": 453309010, 
+    "totalflow": 11605, 
+    "totalpackets": 623018
+  }, 
+  {
+    "average bps": 13021425, 
+    "average pps": 2155, 
+    "date": "2016-12-16 09:20:00", 
+    "totalbytes": 585965758, 
+    "totalflow": 12941, 
+    "totalpackets": 775813
+  }, 
+  {
+    "average bps": 26341358, 
+    "average pps": 3176, 
+    "date": "2016-12-16 09:25:00", 
+    "totalbytes": 1183428348, 
+    "totalflow": 12766, 
+    "totalpackets": 1141854
+  }, 
+  {
+    "average bps": 24102385, 
+    "average pps": 3087, 
+    "date": "2016-12-16 09:30:00", 
+    "totalbytes": 1084489826, 
+    "totalflow": 11250, 
+    "totalpackets": 1111480
+  }, 
+  {
+    "average bps": 12352227, 
+    "average pps": 2263, 
+    "date": "2016-12-16 09:35:00", 
+    "totalbytes": 554899115, 
+    "totalflow": 14162, 
+    "totalpackets": 813643
+  }, 
+  {
+    "average bps": 10956780, 
+    "average pps": 1975, 
+    "date": "2016-12-16 09:40:00", 
+    "totalbytes": 491844377, 
+    "totalflow": 10717, 
+    "totalpackets": 709412
+  }, 
+  {
+    "average bps": 10447352, 
+    "average pps": 1814, 
+    "date": "2016-12-16 09:45:00", 
+    "totalbytes": 468306496, 
+    "totalflow": 11178, 
+    "totalpackets": 650823
+  }, 
+  {
+    "average bps": 10596050, 
+    "average pps": 1981, 
+    "date": "2016-12-16 09:50:00", 
+    "totalbytes": 475938828, 
+    "totalflow": 11996, 
+    "totalpackets": 711900
+  }, 
+  {
+    "average bps": 8580320, 
+    "average pps": 1649, 
+    "date": "2016-12-16 09:55:00", 
+    "totalbytes": 384998987, 
+    "totalflow": 12579, 
+    "totalpackets": 591963
+  }, 
+  {
+    "average bps": 10376242, 
+    "average pps": 1758, 
+    "date": "2016-12-16 10:00:00", 
+    "totalbytes": 465002242, 
+    "totalflow": 10196, 
+    "totalpackets": 630328
+  }, 
+  {
+    "average bps": 7752153, 
+    "average pps": 1658, 
+    "date": "2016-12-16 10:05:00", 
+    "totalbytes": 348453487, 
+    "totalflow": 11555, 
+    "totalpackets": 596540
+  }, 
+  {
+    "average bps": 8656701, 
+    "average pps": 1721, 
+    "date": "2016-12-16 10:10:00", 
+    "totalbytes": 388006333, 
+    "totalflow": 11116, 
+    "totalpackets": 617407
+  }, 
+  {
+    "average bps": 5246506, 
+    "average pps": 1086, 
+    "date": "2016-12-16 10:15:00", 
+    "totalbytes": 234641484, 
+    "totalflow": 13722, 
+    "totalpackets": 388827
+  }, 
+  {
+    "average bps": 5678855, 
+    "average pps": 1086, 
+    "date": "2016-12-16 10:20:00", 
+    "totalbytes": 254613602, 
+    "totalflow": 11704, 
+    "totalpackets": 389848
+  }, 
+  {
+    "average bps": 6861433, 
+    "average pps": 1245, 
+    "date": "2016-12-16 10:25:00", 
+    "totalbytes": 305368936, 
+    "totalflow": 11652, 
+    "totalpackets": 443458
+  }, 
+  {
+    "average bps": 8588199, 
+    "average pps": 1355, 
+    "date": "2016-12-16 10:30:00", 
+    "totalbytes": 384456113, 
+    "totalflow": 9622, 
+    "totalpackets": 485569
+  }, 
+  {
+    "average bps": 3298037, 
+    "average pps": 677, 
+    "date": "2016-12-16 10:35:00", 
+    "totalbytes": 147772691, 
+    "totalflow": 12750, 
+    "totalpackets": 242811
+  }, 
+  {
+    "average bps": 3042877, 
+    "average pps": 578, 
+    "date": "2016-12-16 10:40:00", 
+    "totalbytes": 136823009, 
+    "totalflow": 9265, 
+    "totalpackets": 208078
+  }, 
+  {
+    "average bps": 4831682, 
+    "average pps": 760, 
+    "date": "2016-12-16 10:45:00", 
+    "totalbytes": 216046872, 
+    "totalflow": 11142, 
+    "totalpackets": 271911
+  }, 
+  {
+    "average bps": 3927249, 
+    "average pps": 812, 
+    "date": "2016-12-16 10:50:00", 
+    "totalbytes": 175889728, 
+    "totalflow": 9744, 
+    "totalpackets": 291288
+  }, 
+  {
+    "average bps": 8856927, 
+    "average pps": 1327, 
+    "date": "2016-12-16 10:55:00", 
+    "totalbytes": 397826598, 
+    "totalflow": 12358, 
+    "totalpackets": 477156
+  }, 
+  {
+    "average bps": 8933986, 
+    "average pps": 1472, 
+    "date": "2016-12-16 11:00:00", 
+    "totalbytes": 400928291, 
+    "totalflow": 11488, 
+    "totalpackets": 528604
+  }, 
+  {
+    "average bps": 6581779, 
+    "average pps": 1181, 
+    "date": "2016-12-16 11:05:00", 
+    "totalbytes": 293915938, 
+    "totalflow": 11154, 
+    "totalpackets": 422107
+  }, 
+  {
+    "average bps": 6347365, 
+    "average pps": 1115, 
+    "date": "2016-12-16 11:10:00", 
+    "totalbytes": 284023193, 
+    "totalflow": 11761, 
+    "totalpackets": 399482
+  }, 
+  {
+    "average bps": 4571284, 
+    "average pps": 862, 
+    "date": "2016-12-16 11:15:00", 
+    "totalbytes": 205388971, 
+    "totalflow": 10957, 
+    "totalpackets": 310025
+  }, 
+  {
+    "average bps": 3435069, 
+    "average pps": 800, 
+    "date": "2016-12-16 11:20:00", 
+    "totalbytes": 154428695, 
+    "totalflow": 10248, 
+    "totalpackets": 287945
+  }, 
+  {
+    "average bps": 3937442, 
+    "average pps": 918, 
+    "date": "2016-12-16 11:25:00", 
+    "totalbytes": 175848651, 
+    "totalflow": 9423, 
+    "totalpackets": 328306
+  }, 
+  {
+    "average bps": 6834579, 
+    "average pps": 1257, 
+    "date": "2016-12-16 11:30:00", 
+    "totalbytes": 306735054, 
+    "totalflow": 11382, 
+    "totalpackets": 451669
+  }, 
+  {
+    "average bps": 8486772, 
+    "average pps": 1498, 
+    "date": "2016-12-16 11:35:00", 
+    "totalbytes": 381310675, 
+    "totalflow": 12236, 
+    "totalpackets": 538590
+  }, 
+  {
+    "average bps": 7856633, 
+    "average pps": 1288, 
+    "date": "2016-12-16 11:40:00", 
+    "totalbytes": 351863265, 
+    "totalflow": 9263, 
+    "totalpackets": 461769
+  }, 
+  {
+    "average bps": 8011802, 
+    "average pps": 1407, 
+    "date": "2016-12-16 11:45:00", 
+    "totalbytes": 356070520, 
+    "totalflow": 12549, 
+    "totalpackets": 500364
+  }, 
+  {
+    "average bps": 13801972, 
+    "average pps": 1953, 
+    "date": "2016-12-16 11:50:00", 
+    "totalbytes": 620326223, 
+    "totalflow": 13467, 
+    "totalpackets": 702541
+  }, 
+  {
+    "average bps": 17876529, 
+    "average pps": 2081, 
+    "date": "2016-12-16 11:55:00", 
+    "totalbytes": 802077422, 
+    "totalflow": 16066, 
+    "totalpackets": 747130
+  }, 
+  {
+    "average bps": 7472648, 
+    "average pps": 1416, 
+    "date": "2016-12-16 12:00:00", 
+    "totalbytes": 335786262, 
+    "totalflow": 14396, 
+    "totalpackets": 509032
+  }, 
+  {
+    "average bps": 5540758, 
+    "average pps": 1214, 
+    "date": "2016-12-16 12:05:00", 
+    "totalbytes": 249898615, 
+    "totalflow": 14372, 
+    "totalpackets": 438035
+  }, 
+  {
+    "average bps": 2958661, 
+    "average pps": 870, 
+    "date": "2016-12-16 12:10:00", 
+    "totalbytes": 132583186, 
+    "totalflow": 18443, 
+    "totalpackets": 312157
+  }, 
+  {
+    "average bps": 3072687, 
+    "average pps": 912, 
+    "date": "2016-12-16 12:15:00", 
+    "totalbytes": 137657536, 
+    "totalflow": 18193, 
+    "totalpackets": 327011
+  }, 
+  {
+    "average bps": 3139306, 
+    "average pps": 889, 
+    "date": "2016-12-16 12:20:00", 
+    "totalbytes": 141229948, 
+    "totalflow": 17070, 
+    "totalpackets": 320202
+  }, 
+  {
+    "average bps": 3738979, 
+    "average pps": 1050, 
+    "date": "2016-12-16 12:25:00", 
+    "totalbytes": 167135180, 
+    "totalflow": 11364, 
+    "totalpackets": 375761
+  }, 
+  {
+    "average bps": 4551233, 
+    "average pps": 1273, 
+    "date": "2016-12-16 12:30:00", 
+    "totalbytes": 203039647, 
+    "totalflow": 11397, 
+    "totalpackets": 454349
+  }, 
+  {
+    "average bps": 4476874, 
+    "average pps": 941, 
+    "date": "2016-12-16 12:35:00", 
+    "totalbytes": 200822527, 
+    "totalflow": 10185, 
+    "totalpackets": 338022
+  }, 
+  {
+    "average bps": 3727767, 
+    "average pps": 819, 
+    "date": "2016-12-16 12:40:00", 
+    "totalbytes": 167380506, 
+    "totalflow": 10148, 
+    "totalpackets": 294194
+  }, 
+  {
+    "average bps": 1911909, 
+    "average pps": 626, 
+    "date": "2016-12-16 12:45:00", 
+    "totalbytes": 85998153, 
+    "totalflow": 10634, 
+    "totalpackets": 225613
+  }, 
+  {
+    "average bps": 2947292, 
+    "average pps": 1198, 
+    "date": "2016-12-16 12:50:00", 
+    "totalbytes": 132541943, 
+    "totalflow": 11411, 
+    "totalpackets": 431335
+  }, 
+  {
+    "average bps": 6531863, 
+    "average pps": 1373, 
+    "date": "2016-12-16 12:55:00", 
+    "totalbytes": 293082260, 
+    "totalflow": 14871, 
+    "totalpackets": 493089
+  }, 
+  {
+    "average bps": 7960751, 
+    "average pps": 1295, 
+    "date": "2016-12-16 13:00:00", 
+    "totalbytes": 357878563, 
+    "totalflow": 12018, 
+    "totalpackets": 466030
+  }, 
+  {
+    "average bps": 5950104, 
+    "average pps": 1055, 
+    "date": "2016-12-16 13:05:00", 
+    "totalbytes": 267408098, 
+    "totalflow": 9112, 
+    "totalpackets": 379368
+  }, 
+  {
+    "average bps": 3284677, 
+    "average pps": 902, 
+    "date": "2016-12-16 13:10:00", 
+    "totalbytes": 147781315, 
+    "totalflow": 9273, 
+    "totalpackets": 324884
+  }, 
+  {
+    "average bps": 3549211, 
+    "average pps": 696, 
+    "date": "2016-12-16 13:15:00", 
+    "totalbytes": 158960739, 
+    "totalflow": 9762, 
+    "totalpackets": 249382
+  }, 
+  {
+    "average bps": 3341355, 
+    "average pps": 618, 
+    "date": "2016-12-16 13:20:00", 
+    "totalbytes": 150301673, 
+    "totalflow": 7829, 
+    "totalpackets": 222516
+  }, 
+  {
+    "average bps": 2279676, 
+    "average pps": 576, 
+    "date": "2016-12-16 13:25:00", 
+    "totalbytes": 102478597, 
+    "totalflow": 7744, 
+    "totalpackets": 207152
+  }, 
+  {
+    "average bps": 2115924, 
+    "average pps": 556, 
+    "date": "2016-12-16 13:30:00", 
+    "totalbytes": 94907959, 
+    "totalflow": 7130, 
+    "totalpackets": 199842
+  }, 
+  {
+    "average bps": 1464571, 
+    "average pps": 514, 
+    "date": "2016-12-16 13:35:00", 
+    "totalbytes": 66007127, 
+    "totalflow": 9470, 
+    "totalpackets": 185633
+  }, 
+  {
+    "average bps": 1605987, 
+    "average pps": 456, 
+    "date": "2016-12-16 13:40:00", 
+    "totalbytes": 72164658, 
+    "totalflow": 7486, 
+    "totalpackets": 164062
+  }, 
+  {
+    "average bps": 1638146, 
+    "average pps": 588, 
+    "date": "2016-12-16 13:45:00", 
+    "totalbytes": 73311364, 
+    "totalflow": 8036, 
+    "totalpackets": 210844
+  }, 
+  {
+    "average bps": 889683, 
+    "average pps": 612, 
+    "date": "2016-12-16 13:50:00", 
+    "totalbytes": 39898322, 
+    "totalflow": 7797, 
+    "totalpackets": 219881
+  }, 
+  {
+    "average bps": 4480613, 
+    "average pps": 826, 
+    "date": "2016-12-16 13:55:00", 
+    "totalbytes": 200049299, 
+    "totalflow": 7932, 
+    "totalpackets": 295171
+  }, 
+  {
+    "average bps": 7194127, 
+    "average pps": 1275, 
+    "date": "2016-12-16 14:00:00", 
+    "totalbytes": 323297793, 
+    "totalflow": 7633, 
+    "totalpackets": 458702
+  }, 
+  {
+    "average bps": 6744016, 
+    "average pps": 1141, 
+    "date": "2016-12-16 14:05:00", 
+    "totalbytes": 303355975, 
+    "totalflow": 7320, 
+    "totalpackets": 410800
+  }, 
+  {
+    "average bps": 7341908, 
+    "average pps": 1231, 
+    "date": "2016-12-16 14:10:00", 
+    "totalbytes": 326490993, 
+    "totalflow": 7977, 
+    "totalpackets": 438025
+  }, 
+  {
+    "average bps": 8061557, 
+    "average pps": 1268, 
+    "date": "2016-12-16 14:15:00", 
+    "totalbytes": 360435263, 
+    "totalflow": 8288, 
+    "totalpackets": 453721
+  }, 
+  {
+    "average bps": 7404242, 
+    "average pps": 1172, 
+    "date": "2016-12-16 14:20:00", 
+    "totalbytes": 331288948, 
+    "totalflow": 7201, 
+    "totalpackets": 419727
+  }, 
+  {
+    "average bps": 6683634, 
+    "average pps": 1132, 
+    "date": "2016-12-16 14:25:00", 
+    "totalbytes": 298046665, 
+    "totalflow": 7752, 
+    "totalpackets": 404180
+  }, 
+  {
+    "average bps": 6607408, 
+    "average pps": 1087, 
+    "date": "2016-12-16 14:30:00", 
+    "totalbytes": 297690190, 
+    "totalflow": 6586, 
+    "totalpackets": 391927
+  }, 
+  {
+    "average bps": 7122658, 
+    "average pps": 1130, 
+    "date": "2016-12-16 14:35:00", 
+    "totalbytes": 316480199, 
+    "totalflow": 6773, 
+    "totalpackets": 401678
+  }, 
+  {
+    "average bps": 7522025, 
+    "average pps": 1187, 
+    "date": "2016-12-16 14:40:00", 
+    "totalbytes": 337060087, 
+    "totalflow": 5444, 
+    "totalpackets": 425523
+  }, 
+  {
+    "average bps": 7363263, 
+    "average pps": 1188, 
+    "date": "2016-12-16 14:45:00", 
+    "totalbytes": 329841087, 
+    "totalflow": 6639, 
+    "totalpackets": 425894
+  }, 
+  {
+    "average bps": 6572830, 
+    "average pps": 1208, 
+    "date": "2016-12-16 14:50:00", 
+    "totalbytes": 293499895, 
+    "totalflow": 5792, 
+    "totalpackets": 431770
+  }, 
+  {
+    "average bps": 6354729, 
+    "average pps": 1039, 
+    "date": "2016-12-16 14:55:00", 
+    "totalbytes": 285297949, 
+    "totalflow": 7641, 
+    "totalpackets": 373480
+  }, 
+  {
+    "average bps": 7410556, 
+    "average pps": 1156, 
+    "date": "2016-12-16 15:00:00", 
+    "totalbytes": 332037415, 
+    "totalflow": 6413, 
+    "totalpackets": 414382
+  }, 
+  {
+    "average bps": 6539992, 
+    "average pps": 1012, 
+    "date": "2016-12-16 15:05:00", 
+    "totalbytes": 294842472, 
+    "totalflow": 6988, 
+    "totalpackets": 365074
+  }, 
+  {
+    "average bps": 6108124, 
+    "average pps": 1045, 
+    "date": "2016-12-16 15:10:00", 
+    "totalbytes": 274416650, 
+    "totalflow": 7093, 
+    "totalpackets": 375793
+  }, 
+  {
+    "average bps": 6575695, 
+    "average pps": 1101, 
+    "date": "2016-12-16 15:15:00", 
+    "totalbytes": 294097972, 
+    "totalflow": 7894, 
+    "totalpackets": 394101
+  }, 
+  {
+    "average bps": 5581482, 
+    "average pps": 899, 
+    "date": "2016-12-16 15:20:00", 
+    "totalbytes": 246836188, 
+    "totalflow": 6867, 
+    "totalpackets": 318105
+  }, 
+  {
+    "average bps": 705719, 
+    "average pps": 169, 
+    "date": "2016-12-16 15:25:00", 
+    "totalbytes": 31747770, 
+    "totalflow": 6350, 
+    "totalpackets": 61172
+  }, 
+  {
+    "average bps": 797574, 
+    "average pps": 249, 
+    "date": "2016-12-16 15:30:00", 
+    "totalbytes": 34691504, 
+    "totalflow": 5632, 
+    "totalpackets": 86952
+  }, 
+  {
+    "average bps": 343016, 
+    "average pps": 144, 
+    "date": "2016-12-16 15:35:00", 
+    "totalbytes": 15456263, 
+    "totalflow": 6916, 
+    "totalpackets": 52188
+  }, 
+  {
+    "average bps": 257515, 
+    "average pps": 131, 
+    "date": "2016-12-16 15:40:00", 
+    "totalbytes": 11507353, 
+    "totalflow": 5756, 
+    "totalpackets": 47050
+  }, 
+  {
+    "average bps": 414635, 
+    "average pps": 113, 
+    "date": "2016-12-16 15:45:00", 
+    "totalbytes": 18286966, 
+    "totalflow": 5702, 
+    "totalpackets": 39898
+  }, 
+  {
+    "average bps": 524888, 
+    "average pps": 278, 
+    "date": "2016-12-16 15:50:00", 
+    "totalbytes": 23110441, 
+    "totalflow": 4926, 
+    "totalpackets": 98235
+  }, 
+  {
+    "average bps": 335752, 
+    "average pps": 118, 
+    "date": "2016-12-16 15:55:00", 
+    "totalbytes": 14750760, 
+    "totalflow": 5556, 
+    "totalpackets": 41654
+  }, 
+  {
+    "average bps": 1407208, 
+    "average pps": 233, 
+    "date": "2016-12-16 16:00:00", 
+    "totalbytes": 62174849, 
+    "totalflow": 4527, 
+    "totalpackets": 82572
+  }, 
+  {
+    "average bps": 561960, 
+    "average pps": 121, 
+    "date": "2016-12-16 16:05:00", 
+    "totalbytes": 24750370, 
+    "totalflow": 4953, 
+    "totalpackets": 42741
+  }, 
+  {
+    "average bps": 1161359, 
+    "average pps": 215, 
+    "date": "2016-12-16 16:10:00", 
+    "totalbytes": 52079298, 
+    "totalflow": 5133, 
+    "totalpackets": 77437
+  }, 
+  {
+    "average bps": 595354, 
+    "average pps": 163, 
+    "date": "2016-12-16 16:15:00", 
+    "totalbytes": 26538588, 
+    "totalflow": 5474, 
+    "totalpackets": 58414
+  }, 
+  {
+    "average bps": 533840, 
+    "average pps": 163, 
+    "date": "2016-12-16 16:20:00", 
+    "totalbytes": 23776114, 
+    "totalflow": 4991, 
+    "totalpackets": 58234
+  }, 
+  {
+    "average bps": 136546, 
+    "average pps": 80, 
+    "date": "2016-12-16 16:25:00", 
+    "totalbytes": 6073735, 
+    "totalflow": 4826, 
+    "totalpackets": 28708
+  }, 
+  {
+    "average bps": 432715, 
+    "average pps": 136, 
+    "date": "2016-12-16 16:30:00", 
+    "totalbytes": 19233046, 
+    "totalflow": 4898, 
+    "totalpackets": 48426
+  }, 
+  {
+    "average bps": 288796, 
+    "average pps": 145, 
+    "date": "2016-12-16 16:35:00", 
+    "totalbytes": 12843460, 
+    "totalflow": 5860, 
+    "totalpackets": 51875
+  }, 
+  {
+    "average bps": 209051, 
+    "average pps": 120, 
+    "date": "2016-12-16 16:40:00", 
+    "totalbytes": 9214738, 
+    "totalflow": 5047, 
+    "totalpackets": 42345
+  }, 
+  {
+    "average bps": 414505, 
+    "average pps": 114, 
+    "date": "2016-12-16 16:45:00", 
+    "totalbytes": 18535630, 
+    "totalflow": 6112, 
+    "totalpackets": 40965
+  }, 
+  {
+    "average bps": 548284, 
+    "average pps": 280, 
+    "date": "2016-12-16 16:50:00", 
+    "totalbytes": 24133209, 
+    "totalflow": 5110, 
+    "totalpackets": 98874
+  }, 
+  {
+    "average bps": 345415, 
+    "average pps": 126, 
+    "date": "2016-12-16 16:55:00", 
+    "totalbytes": 15486908, 
+    "totalflow": 6062, 
+    "totalpackets": 45375
+  }, 
+  {
+    "average bps": 1574959, 
+    "average pps": 266, 
+    "date": "2016-12-16 17:00:00", 
+    "totalbytes": 69682130, 
+    "totalflow": 5325, 
+    "totalpackets": 94191
+  }, 
+  {
+    "average bps": 653540, 
+    "average pps": 146, 
+    "date": "2016-12-16 17:05:00", 
+    "totalbytes": 28329266, 
+    "totalflow": 6646, 
+    "totalpackets": 50879
+  }, 
+  {
+    "average bps": 1140656, 
+    "average pps": 207, 
+    "date": "2016-12-16 17:10:00", 
+    "totalbytes": 50880131, 
+    "totalflow": 5651, 
+    "totalpackets": 74052
+  }, 
+  {
+    "average bps": 451786, 
+    "average pps": 149, 
+    "date": "2016-12-16 17:15:00", 
+    "totalbytes": 20207094, 
+    "totalflow": 6235, 
+    "totalpackets": 53369
+  }, 
+  {
+    "average bps": 521716, 
+    "average pps": 150, 
+    "date": "2016-12-16 17:20:00", 
+    "totalbytes": 22797270, 
+    "totalflow": 5747, 
+    "totalpackets": 52571
+  }, 
+  {
+    "average bps": 195667, 
+    "average pps": 107, 
+    "date": "2016-12-16 17:25:00", 
+    "totalbytes": 8460436, 
+    "totalflow": 5228, 
+    "totalpackets": 37063
+  }, 
+  {
+    "average bps": 419469, 
+    "average pps": 134, 
+    "date": "2016-12-16 17:30:00", 
+    "totalbytes": 18764646, 
+    "totalflow": 5494, 
+    "totalpackets": 48129
+  }, 
+  {
+    "average bps": 341948, 
+    "average pps": 127, 
+    "date": "2016-12-16 17:35:00", 
+    "totalbytes": 15123738, 
+    "totalflow": 5798, 
+    "totalpackets": 45037
+  }, 
+  {
+    "average bps": 210323, 
+    "average pps": 109, 
+    "date": "2016-12-16 17:40:00", 
+    "totalbytes": 9198925, 
+    "totalflow": 4245, 
+    "totalpackets": 38425
+  }, 
+  {
+    "average bps": 490103, 
+    "average pps": 112, 
+    "date": "2016-12-16 17:45:00", 
+    "totalbytes": 21408389, 
+    "totalflow": 4989, 
+    "totalpackets": 39252
+  }, 
+  {
+    "average bps": 494946, 
+    "average pps": 254, 
+    "date": "2016-12-16 17:50:00", 
+    "totalbytes": 21196929, 
+    "totalflow": 4361, 
+    "totalpackets": 87336
+  }, 
+  {
+    "average bps": 297967, 
+    "average pps": 105, 
+    "date": "2016-12-16 17:55:00", 
+    "totalbytes": 13264730, 
+    "totalflow": 5046, 
+    "totalpackets": 37721
+  }, 
+  {
+    "average bps": 1199404, 
+    "average pps": 207, 
+    "date": "2016-12-16 18:00:00", 
+    "totalbytes": 53380531, 
+    "totalflow": 4246, 
+    "totalpackets": 73795
+  }, 
+  {
+    "average bps": 403135, 
+    "average pps": 112, 
+    "date": "2016-12-16 18:05:00", 
+    "totalbytes": 17951322, 
+    "totalflow": 4961, 
+    "totalpackets": 40231
+  }, 
+  {
+    "average bps": 119959, 
+    "average pps": 69, 
+    "date": "2016-12-16 18:10:00", 
+    "totalbytes": 5336021, 
+    "totalflow": 4452, 
+    "totalpackets": 24868
+  }, 
+  {
+    "average bps": 258975, 
+    "average pps": 115, 
+    "date": "2016-12-16 18:15:00", 
+    "totalbytes": 11365157, 
+    "totalflow": 4811, 
+    "totalpackets": 40599
+  }, 
+  {
+    "average bps": 267425, 
+    "average pps": 100, 
+    "date": "2016-12-16 18:20:00", 
+    "totalbytes": 11848888, 
+    "totalflow": 4123, 
+    "totalpackets": 35796
+  }, 
+  {
+    "average bps": 1268263, 
+    "average pps": 217, 
+    "date": "2016-12-16 18:25:00", 
+    "totalbytes": 55984935, 
+    "totalflow": 5088, 
+    "totalpackets": 76741
+  }, 
+  {
+    "average bps": 472206, 
+    "average pps": 112, 
+    "date": "2016-12-16 18:30:00", 
+    "totalbytes": 21127662, 
+    "totalflow": 4111, 
+    "totalpackets": 40290
+  }, 
+  {
+    "average bps": 294807, 
+    "average pps": 110, 
+    "date": "2016-12-16 18:35:00", 
+    "totalbytes": 12792833, 
+    "totalflow": 5490, 
+    "totalpackets": 38273
+  }, 
+  {
+    "average bps": 349137, 
+    "average pps": 119, 
+    "date": "2016-12-16 18:40:00", 
+    "totalbytes": 15151897, 
+    "totalflow": 4972, 
+    "totalpackets": 41442
+  }, 
+  {
+    "average bps": 326494, 
+    "average pps": 125, 
+    "date": "2016-12-16 18:45:00", 
+    "totalbytes": 14298123, 
+    "totalflow": 5424, 
+    "totalpackets": 43911
+  }, 
+  {
+    "average bps": 627806, 
+    "average pps": 249, 
+    "date": "2016-12-16 18:50:00", 
+    "totalbytes": 28145126, 
+    "totalflow": 4885, 
+    "totalpackets": 89465
+  }, 
+  {
+    "average bps": 582566, 
+    "average pps": 138, 
+    "date": "2016-12-16 18:55:00", 
+    "totalbytes": 26016631, 
+    "totalflow": 5487, 
+    "totalpackets": 49384
+  }, 
+  {
+    "average bps": 1013999, 
+    "average pps": 191, 
+    "date": "2016-12-16 19:00:00", 
+    "totalbytes": 45276221, 
+    "totalflow": 4391, 
+    "totalpackets": 68280
+  }, 
+  {
+    "average bps": 483989, 
+    "average pps": 136, 
+    "date": "2016-12-16 19:05:00", 
+    "totalbytes": 21404326, 
+    "totalflow": 4863, 
+    "totalpackets": 48407
+  }, 
+  {
+    "average bps": 298652, 
+    "average pps": 86, 
+    "date": "2016-12-16 19:10:00", 
+    "totalbytes": 13388212, 
+    "totalflow": 4816, 
+    "totalpackets": 31069
+  }, 
+  {
+    "average bps": 498961, 
+    "average pps": 152, 
+    "date": "2016-12-16 19:15:00", 
+    "totalbytes": 21914002, 
+    "totalflow": 5061, 
+    "totalpackets": 53543
+  }, 
+  {
+    "average bps": 269101, 
+    "average pps": 112, 
+    "date": "2016-12-16 19:20:00", 
+    "totalbytes": 11685769, 
+    "totalflow": 4371, 
+    "totalpackets": 39124
+  }, 
+  {
+    "average bps": 1331689, 
+    "average pps": 255, 
+    "date": "2016-12-16 19:25:00", 
+    "totalbytes": 59135010, 
+    "totalflow": 4474, 
+    "totalpackets": 90694
+  }, 
+  {
+    "average bps": 430342, 
+    "average pps": 106, 
+    "date": "2016-12-16 19:30:00", 
+    "totalbytes": 18944697, 
+    "totalflow": 4089, 
+    "totalpackets": 37474
+  }, 
+  {
+    "average bps": 247773, 
+    "average pps": 100, 
+    "date": "2016-12-16 19:35:00", 
+    "totalbytes": 10658151, 
+    "totalflow": 4892, 
+    "totalpackets": 34747
+  }, 
+  {
+    "average bps": 437889, 
+    "average pps": 119, 
+    "date": "2016-12-16 19:40:00", 
+    "totalbytes": 19644212, 
+    "totalflow": 4084, 
+    "totalpackets": 42790
+  }, 
+  {
+    "average bps": 322893, 
+    "average pps": 131, 
+    "date": "2016-12-16 19:45:00", 
+    "totalbytes": 14413328, 
+    "totalflow": 5003, 
+    "totalpackets": 46820
+  }, 
+  {
+    "average bps": 651904, 
+    "average pps": 252, 
+    "date": "2016-12-16 19:50:00", 
+    "totalbytes": 28104084, 
+    "totalflow": 4118, 
+    "totalpackets": 87067
+  }, 
+  {
+    "average bps": 466183, 
+    "average pps": 119, 
+    "date": "2016-12-16 19:55:00", 
+    "totalbytes": 20895916, 
+    "totalflow": 5074, 
+    "totalpackets": 42743
+  }, 
+  {
+    "average bps": 1016333, 
+    "average pps": 189, 
+    "date": "2016-12-16 20:00:00", 
+    "totalbytes": 45020413, 
+    "totalflow": 4394, 
+    "totalpackets": 67116
+  }, 
+  {
+    "average bps": 427879, 
+    "average pps": 126, 
+    "date": "2016-12-16 20:05:00", 
+    "totalbytes": 18216012, 
+    "totalflow": 4840, 
+    "totalpackets": 43214
+  }, 
+  {
+    "average bps": 322515, 
+    "average pps": 89, 
+    "date": "2016-12-16 20:10:00", 
+    "totalbytes": 14350707, 
+    "totalflow": 4612, 
+    "totalpackets": 31762
+  }, 
+  {
+    "average bps": 477262, 
+    "average pps": 221, 
+    "date": "2016-12-16 20:15:00", 
+    "totalbytes": 21120163, 
+    "totalflow": 4936, 
+    "totalpackets": 78485
+  }, 
+  {
+    "average bps": 284239, 
+    "average pps": 107, 
+    "date": "2016-12-16 20:20:00", 
+    "totalbytes": 12559692, 
+    "totalflow": 4029, 
+    "totalpackets": 37833
+  }, 
+  {
+    "average bps": 1473842, 
+    "average pps": 257, 
+    "date": "2016-12-16 20:25:00", 
+    "totalbytes": 63435838, 
+    "totalflow": 4488, 
+    "totalpackets": 88519
+  }, 
+  {
+    "average bps": 473455, 
+    "average pps": 122, 
+    "date": "2016-12-16 20:30:00", 
+    "totalbytes": 21250122, 
+    "totalflow": 4629, 
+    "totalpackets": 43815
+  }, 
+  {
+    "average bps": 234631, 
+    "average pps": 93, 
+    "date": "2016-12-16 20:35:00", 
+    "totalbytes": 10147623, 
+    "totalflow": 5535, 
+    "totalpackets": 32515
+  }, 
+  {
+    "average bps": 351356, 
+    "average pps": 142, 
+    "date": "2016-12-16 20:40:00", 
+    "totalbytes": 15347188, 
+    "totalflow": 4647, 
+    "totalpackets": 49646
+  }, 
+  {
+    "average bps": 316155, 
+    "average pps": 131, 
+    "date": "2016-12-16 20:45:00", 
+    "totalbytes": 14114429, 
+    "totalflow": 5580, 
+    "totalpackets": 46918
+  }, 
+  {
+    "average bps": 646490, 
+    "average pps": 260, 
+    "date": "2016-12-16 20:50:00", 
+    "totalbytes": 28968900, 
+    "totalflow": 4675, 
+    "totalpackets": 93229
+  }, 
+  {
+    "average bps": 456966, 
+    "average pps": 109, 
+    "date": "2016-12-16 20:55:00", 
+    "totalbytes": 20309858, 
+    "totalflow": 5623, 
+    "totalpackets": 38992
+  }, 
+  {
+    "average bps": 1117067, 
+    "average pps": 210, 
+    "date": "2016-12-16 21:00:00", 
+    "totalbytes": 47920807, 
+    "totalflow": 4633, 
+    "totalpackets": 72323
+  }, 
+  {
+    "average bps": 442225, 
+    "average pps": 139, 
+    "date": "2016-12-16 21:05:00", 
+    "totalbytes": 19585129, 
+    "totalflow": 5224, 
+    "totalpackets": 49366
+  }, 
+  {
+    "average bps": 469882, 
+    "average pps": 118, 
+    "date": "2016-12-16 21:10:00", 
+    "totalbytes": 20377914, 
+    "totalflow": 5850, 
+    "totalpackets": 41166
+  }, 
+  {
+    "average bps": 390879, 
+    "average pps": 111, 
+    "date": "2016-12-16 21:15:00", 
+    "totalbytes": 17412868, 
+    "totalflow": 5329, 
+    "totalpackets": 39659
+  }, 
+  {
+    "average bps": 255605, 
+    "average pps": 109, 
+    "date": "2016-12-16 21:20:00", 
+    "totalbytes": 11041025, 
+    "totalflow": 4773, 
+    "totalpackets": 37730
+  }, 
+  {
+    "average bps": 1319088, 
+    "average pps": 238, 
+    "date": "2016-12-16 21:25:00", 
+    "totalbytes": 57889698, 
+    "totalflow": 4623, 
+    "totalpackets": 83769
+  }, 
+  {
+    "average bps": 467721, 
+    "average pps": 127, 
+    "date": "2016-12-16 21:30:00", 
+    "totalbytes": 20585887, 
+    "totalflow": 4706, 
+    "totalpackets": 44923
+  }, 
+  {
+    "average bps": 228816, 
+    "average pps": 91, 
+    "date": "2016-12-16 21:35:00", 
+    "totalbytes": 10088134, 
+    "totalflow": 5470, 
+    "totalpackets": 32112
+  }, 
+  {
+    "average bps": 322585, 
+    "average pps": 105, 
+    "date": "2016-12-16 21:40:00", 
+    "totalbytes": 13639177, 
+    "totalflow": 4157, 
+    "totalpackets": 35818
+  }, 
+  {
+    "average bps": 298683, 
+    "average pps": 121, 
+    "date": "2016-12-16 21:45:00", 
+    "totalbytes": 13431669, 
+    "totalflow": 5356, 
+    "totalpackets": 43674
+  }, 
+  {
+    "average bps": 635857, 
+    "average pps": 267, 
+    "date": "2016-12-16 21:50:00", 
+    "totalbytes": 27796524, 
+    "totalflow": 4426, 
+    "totalpackets": 93692
+  }, 
+  {
+    "average bps": 547006, 
+    "average pps": 105, 
+    "date": "2016-12-16 21:55:00", 
+    "totalbytes": 24206684, 
+    "totalflow": 4908, 
+    "totalpackets": 37497
+  }, 
+  {
+    "average bps": 970029, 
+    "average pps": 181, 
+    "date": "2016-12-16 22:00:00", 
+    "totalbytes": 43571169, 
+    "totalflow": 4028, 
+    "totalpackets": 65304
+  }, 
+  {
+    "average bps": 439654, 
+    "average pps": 135, 
+    "date": "2016-12-16 22:05:00", 
+    "totalbytes": 19605933, 
+    "totalflow": 5582, 
+    "totalpackets": 48441
+  }, 
+  {
+    "average bps": 330688, 
+    "average pps": 112, 
+    "date": "2016-12-16 22:10:00", 
+    "totalbytes": 14600016, 
+    "totalflow": 4532, 
+    "totalpackets": 39762
+  }, 
+  {
+    "average bps": 418734, 
+    "average pps": 118, 
+    "date": "2016-12-16 22:15:00", 
+    "totalbytes": 18467962, 
+    "totalflow": 5864, 
+    "totalpackets": 41812
+  }, 
+  {
+    "average bps": 295258, 
+    "average pps": 127, 
+    "date": "2016-12-16 22:20:00", 
+    "totalbytes": 13056826, 
+    "totalflow": 6063, 
+    "totalpackets": 45249
+  }, 
+  {
+    "average bps": 1346140, 
+    "average pps": 242, 
+    "date": "2016-12-16 22:25:00", 
+    "totalbytes": 59361751, 
+    "totalflow": 4504, 
+    "totalpackets": 85647
+  }, 
+  {
+    "average bps": 544320, 
+    "average pps": 146, 
+    "date": "2016-12-16 22:30:00", 
+    "totalbytes": 24365737, 
+    "totalflow": 4319, 
+    "totalpackets": 52338
+  }, 
+  {
+    "average bps": 238424, 
+    "average pps": 72, 
+    "date": "2016-12-16 22:35:00", 
+    "totalbytes": 10571560, 
+    "totalflow": 5347, 
+    "totalpackets": 25671
+  }, 
+  {
+    "average bps": 449990, 
+    "average pps": 123, 
+    "date": "2016-12-16 22:40:00", 
+    "totalbytes": 19904953, 
+    "totalflow": 4328, 
+    "totalpackets": 43822
+  }, 
+  {
+    "average bps": 328758, 
+    "average pps": 129, 
+    "date": "2016-12-16 22:45:00", 
+    "totalbytes": 14797190, 
+    "totalflow": 5395, 
+    "totalpackets": 46681
+  }, 
+  {
+    "average bps": 704180, 
+    "average pps": 290, 
+    "date": "2016-12-16 22:50:00", 
+    "totalbytes": 30766635, 
+    "totalflow": 4894, 
+    "totalpackets": 101474
+  }
+]
+
+var chart1 = AmCharts.makeChart("chartdiv1", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight": 80,
+    "dataProvider": chartData,
+    "valueAxes": [{
+        "position": "left",
+        "title": "totalpackets"
+    }],
+    "graphs": [{
+        "id": "g1",
+        "fillAlphas": 0.4,
+        "valueField": "totalpackets",
+         "balloonText": "<div style='margin:5px; font-size:19px;'>totalpackets:<b>[[totalpackets]]</b></div>"
+    }],
+    "chartScrollbar": {
+        "graph": "g1",
+        "scrollbarHeight": 80,
+        "backgroundAlpha": 0,
+        "selectedBackgroundAlpha": 0.1,
+        "selectedBackgroundColor": "#888888",
+        "graphFillAlpha": 0,
+        "graphLineAlpha": 0.5,
+        "selectedGraphFillAlpha": 0,
+        "selectedGraphLineAlpha": 1,
+        "autoGridCount": true,
+        "color": "#AAAAAA"
+    },
+    "chartCursor": {
+        "categoryBalloonDateFormat": "JJ:NN, DD MMMM",
+        "cursorPosition": "mouse"
+    },
+    "categoryField": "date",
+    "categoryAxis": {
+        "minPeriod": "mm",
+        "parseDates": true
+    },
+    "export": {
+        "enabled": true,
+         "dateFormat": "YYYY-MM-DD HH:NN:SS"
+    }
+});
+
+
+
+var chart2 = AmCharts.makeChart("chartdiv2", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight": 80,
+    "dataProvider": chartData,
+    "valueAxes": [{
+        "position": "left",
+        "title": "totalflow"
+    }],
+    "graphs": [{
+        "id": "g1",
+        "fillAlphas": 0.4,
+        "valueField": "totalflow",
+         "balloonText": "<div style='margin:5px; font-size:19px;'>totalflow:<b>[[totalflow]]</b></div>"
+    }],
+    "chartScrollbar": {
+        "graph": "g1",
+        "scrollbarHeight": 80,
+        "backgroundAlpha": 0,
+        "selectedBackgroundAlpha": 0.1,
+        "selectedBackgroundColor": "#888888",
+        "graphFillAlpha": 0,
+        "graphLineAlpha": 0.5,
+        "selectedGraphFillAlpha": 0,
+        "selectedGraphLineAlpha": 1,
+        "autoGridCount": true,
+        "color": "#AAAAAA"
+    },
+    "chartCursor": {
+        "categoryBalloonDateFormat": "JJ:NN, DD MMMM",
+        "cursorPosition": "mouse"
+    },
+    "categoryField": "date",
+    "categoryAxis": {
+        "minPeriod": "mm",
+        "parseDates": true
+    },
+    "export": {
+        "enabled": true,
+         "dateFormat": "YYYY-MM-DD HH:NN:SS"
+    }
+});
+
+chart.addListener("dataUpdated", zoomChart);
+// when we apply theme, the dataUpdated event is fired even before we add listener, so
+// we need to call zoomChart here
+zoomChart();
+// this method is called when chart is first inited as we listen for "dataUpdated" event
+
+
+</script>
+
+<!-- HTML -->
+<div id="chartdiv1" ></div>
+<div id="chartdiv2" ></div>
+

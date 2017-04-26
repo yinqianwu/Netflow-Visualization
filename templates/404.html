@@ -1,0 +1,120 @@
+{% extends "header.html" %} 
+
+{% block body %} 
+
+	
+
+					
+<body class="body">
+  <div class="container" align="left">
+	<img style="max-width:300px"src="/static/images/404error.gif">
+  </div>
+  <div class="container" align="left">
+	<h4>Your Page was not found.</h4>
+	<p>This error has been logged and will be reviewed.</p> 
+	<p>Feel free to contact nowhere for help!</p>
+	<p><a class="btn btn-primary btn-lg" onclick="goBack()" role="button">Go Back!</a></p>
+  </div>
+</body>
+
+
+		<!--login modal-->
+		
+<div id="modalLogin" class="modal">
+			<div class="modal-content">
+				<h2 class="center-align">Login</h2>
+				<div class="center-align">
+					<div class="divider"></div>
+					
+					<form class="col s12">
+						<div class="row center-align">
+							<div class="input-field col m10">
+								<input id="icon_prefix" type="text" class="validate">
+								<label for="icon_prefix">Username</label>
+							</div>
+							<div class="input-field col m10">
+								<input id="icon_password" type="password" class="validate">
+								<label for="icon_password">Password</label>
+							</div>
+						</div>
+					</form>
+					
+					
+					<div class="divider"></div>
+					<p>
+						<a href="#" class="btn btn-flat white modal-close">Cancel</a> &nbsp;
+						<a href="#" class="waves-effect waves-blue blue btn btn-flat modal-action modal-close">Login</a>
+					</p>
+					
+					
+				</div>
+			</div>
+		</div>
+
+
+	
+
+
+		
+		<script>
+			$(document).ready(function(){
+				$(".button-collapse").sideNav();
+				$('.modal-trigger').leanModal();
+				$('.collapsible').collapsible({
+				  accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+				});
+				$('#aside').pushpin({ top:110, bottom:500 });
+		  });
+		</script>
+		<script>
+		  $(document).ready(function(){
+			$('.collapsible').collapsible({
+			  accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+			});
+			$('select').material_select();
+		  });
+	  </script>
+	  <script>
+		function goBack() {
+			window.history.back()
+		}
+	</script>
+		<script type="text/javascript" src="/static/js/run_prettify.js"></script>
+	  
+	</body>
+
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">You've reached the end!</h5>
+                
+               
+              
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h6 class="white-text">Legal stuff:</h6>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="/about/tos/">Terms and Conditions</a></li>
+                  <li><a class="grey-text text-lighten-3" href="/about/privacy-policy/">Privacy Policy</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a href="https://xkcd.com/353/" target='blank'><p class="grey-text right" style='padding-right:10px'>Programming is a superpower.</p></a>
+          <div class="footer-copyright">
+            <div class="container">
+            
+            
+            </div>
+
+          </div>
+        </footer>
+
+
+
+{% endblock %}
+
+
+
