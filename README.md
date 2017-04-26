@@ -1,3 +1,3 @@
 # Netflow-Visualization
 
-using framework Flask to visualize netflow data 
+Python code to collect netflow packets, analyze them, and ultimately visualize the data
